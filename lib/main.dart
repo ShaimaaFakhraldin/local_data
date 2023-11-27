@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:local_data/sql/data_basehelper.dart';
+import 'package:local_data/sql/home_ui.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+DataBaseHelper database = DataBaseHelper();
 
 void main() async {
   //
   await WidgetsFlutterBinding.ensureInitialized();
+  database.init();
   runApp(const MyApp());
 }
 
@@ -27,7 +32,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const HomeUi(title: 'Flutter Demo Home Page'),
     );
   }
 }
