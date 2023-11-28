@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:local_data/sql/data_basehelper.dart';
-import 'package:local_data/sql/home_ui.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'online/my_wall_ui.dart';
 
 DataBaseHelper database = DataBaseHelper();
 
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const HomeUi(title: 'Flutter Demo Home Page'),
+      home: MyWallUi(),
     );
   }
 }
